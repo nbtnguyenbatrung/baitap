@@ -1,0 +1,64 @@
+button{
+    padding: 1rem 5rem;
+    margin-right: 3rem;
+    background-color: rgb(108, 83, 210);
+    color: white;
+  }
+
+  .button_two{
+    border-radius: 0.6rem;
+  }
+  
+  .button_three{
+    border-radius: 5rem;
+  }
+
+  button:hover{
+    background-color: red;
+    color: black;
+  }
+
+  .color__item{
+      width: 10rem;
+      height: 2rem;
+      list-style-type: none;
+  }
+  .color__item:first-child{
+      background-color: red;
+  }
+
+  .color__item:nth-child(2){
+      background-color: black;
+  }
+  .color__item:nth-of-type(3){
+      background-color: green;
+  }
+  .color__item:nth-last-of-type(3){
+      background-color: greenyellow;
+  }
+  .color__item:nth-last-of-type(2){
+      background-color: hotpink;
+  }
+  .color__item:last-child{
+      background-color: indigo;
+  }
+
+  div[data-link="https"]{
+      color: red;
+  }
+
+  div[data-link$=".vn"]{
+    color: blue;
+}
+
+div[data-name*="hello"]{
+    color: coral;
+}
+
+input[type="email"]{
+    background-color: cornflowerblue;
+}
+
+input[name="fullname"]{
+    background-color: cyan;
+}

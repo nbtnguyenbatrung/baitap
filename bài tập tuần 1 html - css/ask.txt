@@ -1,0 +1,18 @@
+bài 1 : Liệt kê 10 thẻ inline, 10 thẻ block và các thẻ semantic HTML5 mà bạn biết 
+
+a) 10 thẻ inline 
++ b , a , i , u , Strong , Span , img , input , button ,  sub , sup
+
+b) 10 thẻ block 
++ cách thẻ h , form , li , ol , ul , p , table , div , selection ,  body , header 
+
+c) các thể semantic 
++ header , footer , body , section , nav , div , main 
+
+bài 2 : Làm 1 ví dụ về BEM cho block có tên là boy 
+BEM : viết tắt của block element modifier 
++ block : .boy{} .
++ block + element : .boy__hair{} , .boy__hand{} , boy__face{}
++ block + modifier : .boy--arm{} , .boy--leg{} .
++ block + element + modifier :  .boy__hand--thumb{} , .boy__hand--indexfinger{} .
+

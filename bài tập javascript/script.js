@@ -82,3 +82,44 @@ reverse("12345");
 
 // bài 6 
 
+function js_style(params) {
+    var style = document.getElementById("text");
+    style.style.color = "red";
+    style.style.fontSize = "30px";
+}
+
+// bài 7 
+
+ function deleteArray(Array=[]) {
+     
+    console.log("Mảng trước khi xóa các phần tử không là duy nhất : " + Array);
+
+    Array.sort(function (a,b) {
+        return a - b
+    })
+    var ArrayEdit = [];
+    for(var i = 0 ; i<Array.length-1 ; i++){
+        
+        if(Array[i] === Array[i+1]){
+            if(ArrayEdit.indexOf(Array[i]) < 0)
+                ArrayEdit.push(Array[i]);
+        }
+    }
+
+    var index = 0;
+    do{
+        for(var i = 0 ; i<ArrayEdit.length ; i++){
+            if(Array[index] == ArrayEdit[i]){
+                Array.splice(index, 1);
+                index = -1;
+            }
+        }
+        index++;
+    }
+    while(index <= Array.length);
+
+    console.log("Mảng sau khi xóa các phần tử không là duy nhất : " + Array);
+}
+var Array = [1,1,2,2,5,5,5,7,7,8,9,10];
+deleteArray(Array);
+

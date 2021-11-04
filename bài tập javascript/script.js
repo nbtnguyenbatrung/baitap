@@ -41,12 +41,15 @@ console.log("Tính căn bậc 2 cuae 1 số " + calculator.sqrt(-1));
 // bài 2 
 
 var  Fibonacci = function Fibonacci(n) {
+    if(n<= 0 ){
+        return " Không thể thực hiện  ";
+    }
     if (n == 1 || n == 2)
         return 1;
     return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
 
-console.log("giá trị của fibonacci thứ 4 là  " + Fibonacci(4) );
+console.log("giá trị của fibonacci là  " + Fibonacci(4) );
 
 // bài 3 
 var year = function year(n) {

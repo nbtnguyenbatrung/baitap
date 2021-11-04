@@ -1,0 +1,100 @@
+BÀI 1 SỮ KHÁC NHÃU GIỮA ID VÀ CLASS 
+id và class tương đồng là giống nhau . sự khác nhau đó là 
+id thì chỉ có thể được dùng 1 lần cho 1 tên gọi 
+class thì có thể dùng nhiều lần cho cùng 1 tên gọi dùng trong css hay js thì ta dùng # cho id còn . cho class
+
+BÀI 2 THỂ INLINE VÀ THẺ BLOCK 
+THẺ BLOCK: là những thẻ mà khi ta dùng phần tử chiếm hết không gian theo chiều ngang của phần tử cha còn chiều cao chiều rộng thì phụ thuộc vào nội dung của các phần tử 
+các thẻ inline thường thấy : <h1> , <form> , <li> ,<ol> , <ul> , <p> , <table >,<div> , <pre> , <selection> ,  body , header ,
+THẺ INLINE là thẻ chiếm không gian theo chiều ngang của nội dung phần tử 
+ví dụ : <b> , <a> , <Strong > , <Span> , <img> , <input> , <em> , <i> , <button> , < sub> , <sup>
+
+BÀI 3 CSS SELECTOR CÓ 8 LOẠI SELECTER 
+1) css selector là thứ cho phép bạn nhắm mục tiêu tới các phần tử HTML để áp dụng các thuộc tính css cho chúng 
+-bộ chọn css cơ bản (basic css selecter ) sử dụng chọn element/class/id  . chúng được sử dụng thường xuyên nhất và dễ nhớ nhất 
+ví dụ : element selector 
+p{ color : blue ;}
+div{ color : magenta ; }
+class selector id thì tương tự 
+.hello {
+color : red ;
+}
+
+2) descendant css selecter  để chọn hậu duệ của bất kỳ phần tử nào 
+ví dụ : A B . chọn bất kỳ B nào làm hậu duệ của A
+.container .hello-classs{
+color : red ; 
+}
+dùng * để chọn hết các phàn tử hậu duệ 
+child selector : A > B không giống như trên mà chỉ chọn hậu duệ trực tiếp 
+
+3) Multiple css selector cho phép chugns ta chọn nhiều phần tử không liên quan với nhau 
+ví dụ A, B , C , D , .... để chọn nhiều phần tử class / id
+
+4) combination cs selector cho phép bạn chọn thành phần rất cụ thể bằng nhiều tham chiếu 
+trường hợp sử dụng phổ biến nhất là hiệu ứng làm nổi bật button khi được di chuột ( hovered ) / nhấp ( clicked ) bằng cách cugn cấp cho chúng mọt class .active
+vd AB cho phép chọn phần tử chứa cả A và B 
+
+5) sibling css selector nhằm chọn cacp hần tử anh chị em
+ví dụ : Bộ chọn Anh / Chị / Em liền kề (Nghiêm ngặt): A + B. Nhắm mục tiêu một phần tử anh chị em được đặt ngay sau phần tử đó.
+
+Bộ chọn Anh / Chị / Em liền kề (Không nghiêm ngặt): A ~ B. Giống như bộ chọn bên trên nhưng không giới hạn 1 phần tử đầu tiên.
+
+6) pesudo css selector 
+Chọn phần tử đầu tiên: A:first-child. Nó chọn đến phần tử con đầu tiên. (A phải có cha mẹ)
+ví dụ 
+li:first-child{
+color : blue;
+}
+
+Chọn phần tử con cuối cùng: A:last-child. Hoạt động như A:first-child, ngoại trừ thay vì chọn phần tử con đầu tiên, nó chọn phần tử con cuối cùng.
+
+Chỉ chọn phần tử con: A:only-child. Chọn tất cả A là con duy nhất của cha mẹ nó. Tương tự như bộ chọn phần tử con đầu tiên (A:first-child) và phần tử con cuối cùng (A:last-child). Ngoại trừ mục tiêu không được có anh chị em nào.
+
+Bộ chọn phần tử con thứ N: A:nth-child(n). Nó chọn từng mục tiêu là con thứ n của cha mẹ nó.
+
+Bộ chọn con thứ N cuối cùng: A:nth-last-child(n). Nó tương tự như bộ chọn con thứ N, ngoại trừ nó được tính từ cuối cùng.
+
+Không chọn: A:not(B). Chọn tất cả các phần tử A mà không phải B
+
+Bộ chọn loại đầu tiên: A:first-of-type. Nó chọn phần tử đầu tiên thuộc loại này trong số các phần tử anh chị em của nó.
+
+Bộ chọn loại cuối cùng: A:last-of-type
+
+Bộ chọn loại thứ N: A:nth-of-type(n)
+
+Bộ chọn Only type: A:only-of-type. Chọn phần tử chỉ có loại đó, không có Anh / Chị / Em.
+
+7) Pesudo-Selector (links và input)
+Hover Selector: A:hover. Chọn phần tử được hover. Thường được sử dụng để làm nổi bật các liên kết.
+
+Focus Selector: A:focus. Chọn phần tử bạn đang tập trung vào nó. Thường được sử dụng với input.
+
+Active Selector: A:active. Chọn phần tử đang có trạng thái active.
+
+Link Selector: A:link. Nó chọn tất cả các link chưa được click.
+
+8) Attribute CSS Selector
+
+Bộ chọn thuộc tính cơ bản: A[B]. Chọn tất cả các phần tử A có thuộc tính B.
+
+Bộ chọn thuộc tính cụ thể: A[B="C"]. Chọn các phần tử A có thuộc tính B với giá trị là C.
+
+Bộ chọn thuộc tính cụ thể (Bắt đầu với ...): A[B^="C"]. Chọn tất cả các phần tử A có thuộc tính B với giá trị bắt đầu là C. Ký tự ^ là ký tự thể hiện chuỗi bắt đầu (trong Biểu thức chính quy (Regex)).
+
+Bộ chọn thuộc tính cụ thể (Kết thúc với ...): A[B$="C"]. Chọn tất cả các phần tử A có thuộc tính B với giá trị kết thúc là C. Ký tự $ là ký tự thể hiện chuỗi kết thúc trong (Biểu thức chính quy (Regex)).
+
+Bộ chọn thuộc tính cụ thể (Chứ ký tự ...): A[B*="C"]. Chọn tất cả phần tử A với thuộc tính B chứa giá trị C.
+
+BÀI 3 : RESET CSS là thiết lập lại các đối tượng html theo chuẩn nhất định 
+tại sao vì : để cả trang web có thể dùng chung được 
+
+important có đọ ưu tiên cao nhất > inline > internal > external 
+
+Closure được định nghĩa là một trong những hàm được viết lồng vào trong hàm khác. Nó được sử dụng để biến đổi toàn cục, biến cục bộ của chính nó. 
+
+Trong javascript, chúng ta dùng từ khóa this để đại diện cho một đối tượng (Object). Đối tượng đó là chủ thế của ngữ cảnh, hoặc là chủ thế của code đang được chạy.
+
+Một trường hợp khác, khi ta khai báo biến global và hàm global, toàn bộ các biến và hàm đó sẽ nằm trong một object có tên là window. Lúc này, khi ta gọi hàm showName, chính object window là object gọi hàm đó, this trỏ tới chính object window.
+
+ES6 TRONG JAVASCRIPT 

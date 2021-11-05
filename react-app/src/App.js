@@ -14,6 +14,7 @@ class App extends React.Component {
       history : [{
         squares : Array(9).fill(null)
       }],
+      stepnumber : 0,
       next : true
     };
   }
@@ -44,18 +45,19 @@ class App extends React.Component {
     const history = this.state.history;
     const current = history[history.length - 1];
     const winner = win(current.squares);
+
     const move = history.map((step, move) => {
       const desc = move ? 
       "go to move " + move :
       "go to game start ";
       return (
-        <li>
-          <button onClick={()=>{
-            this.jumpto(move)
-          }}>{desc}</button>
+        <li key = {move}>
+          <button onClick = {() => {this.jumpto(move)} } >
+            {desc}
+          </button>
         </li>
-      )
-    })
+      );
+    });
     var status ;
     if(winner){
       status = "winner : " + winner;
